@@ -1,2 +1,2 @@
-# DevOps_basic_KirilsKiselovs
-DevOps pamati iesācējiem
+# DevOps repozitorijs
+Kirils Kiselovs DevOps repozitorijs pamati iesācējiem
