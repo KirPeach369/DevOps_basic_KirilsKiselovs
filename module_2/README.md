@@ -25,3 +25,4 @@ git log --author="Laura Pacilio" --before="2021-10-01 00:00:00" --after="2021-09
 git log --author="Laura Pacilio" --since=yesterday.00am
 
 * git log --before="2021-04-22 00:00:00" --after="2021-04-20 00:00:00" 
+  iespējams ir saistīts ar git-merge 
