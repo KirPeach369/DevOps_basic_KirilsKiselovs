@@ -57,13 +57,18 @@ module "ec2_instance" {
 
   name = "EC2_instance_KK"
 
-  ami                    = "ami-0ee8244746ec5d6d4"
+  ami                    = "ami-0ca285d4c2cda3300"
   instance_type          = "t3.micro"
   subnet_id              = element(module.vpc.public_subnets, 0)
   vpc_security_group_ids = [aws_security_group.sg_KK.id]
 
   user_data = <<EOF
 #!/bin/bash
-echo "Hello Terraform!"
+set -ex
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html
 EOF
 }
